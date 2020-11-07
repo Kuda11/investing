@@ -1,11 +1,16 @@
-import logo from './logo.svg';
-import './App.module.scss';
+import React, { Component } from 'react'
+import styles from './App.module.scss'
+import Routes from './containers/Routes/Routes'
+
+import { Button } from 'semantic-ui-react'
 
 function App() {
   return (
-    <div className="App">
-      I am working
-    </div>
+    <>
+    <section>
+      <Routes />
+    </section>
+    </>
   );
 }
 
