@@ -15,7 +15,7 @@ const FormSignUp = () => {
        await firebase
        .auth()
        .createUserWithEmailAndPassword(email, password)
-       navigate("/")    
+       navigate("home-page")    
      }
      catch (error) {
        alert(error)

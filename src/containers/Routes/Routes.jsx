@@ -9,7 +9,7 @@ const Routes = () => {
   return (
     <>
     <Router>
-    <SignUpPage path="sign-up-page"/> 
+    <SignUpPage path="/"/> 
     <LoginPage path="login-page" />         
         <PrivateRoutes path="/">
             <HomePage path="home-page"/>
