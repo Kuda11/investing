@@ -1,19 +1,20 @@
 import React, { useCallback, useState } from "react";
 import { Form, Input, Button } from 'semantic-ui-react'
 import SocialFollow from './SocialFollow'
-import { Link, navigate } from '@reach/router'
+import { navigate } from '@reach/router'
 import firebase from "../../../firebase"
 
-const FormSignUp = () => {
+const FormLogin = () => {
   let [password, setPass] = useState("")
   let [email, setEm] = useState("")
  
-   const handleLogin = useCallback(async event => { 
+   const handleSignUp = useCallback(async event => { 
      event.preventDefault();
+     
      try { 
        await firebase
        .auth()
-       .createUserWithEmailAndPassword(email, password)
+       .signInWithEmailAndPassword(email, password)
        navigate("home-page")    
      }
      catch (error) {
@@ -23,7 +24,7 @@ const FormSignUp = () => {
 
   return (
     <>
-      <Form onSubmit={handleLogin}>
+      <Form onSubmit={handleSignUp}>
       <Form.Group widths='equal'>
         <Form.Field
         id='form-input-control-email'
@@ -35,21 +36,21 @@ const FormSignUp = () => {
         <Form.Input 
         label='Password' 
         type='password' 
+        placeholder='minimum 6 characters'
         onInput={e => setPass(e.target.value)}
         />
       </Form.Group>
       <Form.Field
         id='form-button-control-public'
         control={Button}
-        content='Submit'
+        content='Confirm'
       />
     </Form>
-    <p><a href="login-page">Login if you already have an account</a> </p>
-
-    <p>or sign up with Google</p>
+    <p><a href="/">Create an account if you have an account</a> </p>
+    <p>or sign in with Google</p>
     <SocialFollow/>
     </>
   );
 };
 
-export default FormSignUp;
+export default FormLogin;
