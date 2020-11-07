@@ -8,7 +8,7 @@ const PrivateRoutes = (props) => {
   useEffect(() =>{
     console.log('started useEffect')
     firebase.auth().onAuthStateChanged((user) => {
-     !user ?  navigate("/sign-up-page") : navigate()
+     !user ?  navigate("/") : navigate()
     }) 
   }, [])
 
