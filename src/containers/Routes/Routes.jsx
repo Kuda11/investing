@@ -6,17 +6,15 @@ import LoginPage from "../../components/LoginPage"
 import PrivateRoutes from "./PrivateRoutes"
 
 const Routes = () => {
-  return (
-    <>
-    <Router>
-    <SignUpPage path="/"/> 
-    <LoginPage path="login-page" />         
-        <PrivateRoutes path="/">
-            <HomePage path="home-page"/>
-        </PrivateRoutes>
-    </Router>
-    </>
-  );
+    return (
+        <Router>
+            <SignUpPage path="/" />
+            <LoginPage path="login-page" />
+            <PrivateRoutes path="/">
+                <HomePage path="home-page" />
+            </PrivateRoutes>
+        </Router>
+    );
 };
 
 export default Routes;
