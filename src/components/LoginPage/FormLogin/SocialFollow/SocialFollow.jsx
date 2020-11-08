@@ -2,6 +2,7 @@ import React from 'react'
 import styles from "./SocialFollow.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import firebase, { provider } from '../../../../firebase'
+import { navigate } from '@reach/router'
 import {
   faGoogle
 }
@@ -11,6 +12,7 @@ const SocialFollow = () => {
 
   const goToSignInWithGoogle = () => {
     firebase.auth().signInWithRedirect(provider)
+    navigate("home-page")
   }
   
   return (
