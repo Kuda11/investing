@@ -12,7 +12,9 @@ const SocialFollow = () => {
 
   const goToSignInWithGoogle = () => {
     firebase.auth().signInWithRedirect(provider)
-    navigate('home-page')
+      .then(() => {
+      navigate("home-page")
+    })
   }
   
   return (
