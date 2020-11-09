@@ -46,7 +46,7 @@ const FormLogin = () => {
           content='Confirm'
         />
       </Form>
-      <p><a href="/">Create an account if you have an account</a> </p>
+      <p><a href="/">Create an account if you do not have an account</a> </p>
       <p>or sign in with Google</p>
       <SocialFollow />
     </>
