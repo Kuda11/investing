@@ -10,9 +10,8 @@ import {
 
 const SocialFollow = () => {
 
-  const goToSignInWithGoogle = async() => {
-    await firebase.auth().signInWithRedirect(provider)
-    navigate("home-page")
+  const goToSignInWithGoogle = () => {
+    firebase.auth().signInWithRedirect(provider)
   }
   
   return (
