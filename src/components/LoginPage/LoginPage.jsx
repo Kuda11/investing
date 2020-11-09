@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import FormLogin from "./FormLogin"
 import firebase from "../../firebase"
 import { navigate } from '@reach/router'
-import { Grid, Segment } from 'semantic-ui-react'
+import { Grid, Segment,Container } from 'semantic-ui-react'
 
 const LoginPage = () => {
   useEffect(() => {
@@ -14,14 +14,16 @@ const LoginPage = () => {
   }, [])
 
   return (
-    <Grid centered columns={2} divided>
-      <Grid.Column>
-        <Segment textAlign='center'><h2>Login</h2></Segment>
-        <Segment>
-          <FormLogin />
-        </Segment>
-      </Grid.Column>
-    </Grid>
+    <Container>
+      <Grid centered divided>
+        <Grid.Column>
+          <Segment textAlign='center'><h2>Login</h2></Segment>
+          <Segment>
+            <FormLogin />
+          </Segment>
+        </Grid.Column>
+      </Grid>
+    </Container>
   );
 };
 

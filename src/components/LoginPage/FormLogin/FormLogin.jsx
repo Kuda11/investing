@@ -36,14 +36,14 @@ const FormLogin = () => {
           <Form.Input
             label='Password'
             type='password'
-            placeholder='minimum 6 characters'
+            placeholder='user123'
             onInput={e => setPass(e.target.value)}
           />
         </Form.Group>
         <Form.Field
           id='form-button-control-public'
           control={Button}
-          content='Confirm'
+          content='Login'
         />
       </Form>
       <p><a href="/">Create an account if you do not have an account</a> </p>
