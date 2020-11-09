@@ -14,6 +14,7 @@ const SocialFollow = () => {
     firebase.auth().signInWithRedirect(provider)
       .then(() => {
       navigate("home-page")
+    }
   }
   
   return (
