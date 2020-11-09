@@ -2,11 +2,7 @@ import React from 'react'
 import Routes from './containers/Routes/Routes'
 
 function App() {
-  return (
-    <>
-      <Routes />
-    </>
-  );
+  return <Routes />
 }
 
 export default App;

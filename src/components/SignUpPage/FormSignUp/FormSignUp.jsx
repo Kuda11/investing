@@ -5,8 +5,8 @@ import { navigate } from '@reach/router'
 import firebase from "../../../firebase"
 
 const FormSignUp = () => {
-  let [password, setPass] = useState("")
-  let [email, setEm] = useState("")
+  let [password, setPass] = useState()
+  let [email, setEm] = useState()
 
   const handleLogin = useCallback(async event => {
     event.preventDefault();
