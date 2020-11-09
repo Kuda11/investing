@@ -15,7 +15,7 @@ const SocialFollow = () => {
 
   return (
     <div className={styles.socialContainer}>
-      <a onClick={goToSignInWithGoogle} className={styles.twitterSocial}>
+      <a href='/' onClick={goToSignInWithGoogle} className={styles.twitterSocial}>
         <FontAwesomeIcon icon={faGoogle} size="3x" />
       </a>
     </div>
