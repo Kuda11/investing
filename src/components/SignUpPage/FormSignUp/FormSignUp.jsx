@@ -1,12 +1,12 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import { Form, Input, Button } from 'semantic-ui-react'
 import SocialFollow from './SocialFollow'
 import { navigate } from '@reach/router'
 import firebase from "../../../firebase"
 
 const FormSignUp = () => {
-  let [password, setPass] = useState()
-  let [email, setEm] = useState()
+  const [password, setPass] = useState('')
+  const [email, setEm] = useState('')
 
   const handleLogin = async(e) => {
     e.preventDefault();
@@ -30,7 +30,7 @@ const FormSignUp = () => {
             control={Input}
             label='Email'
             placeholder='testuser@google.com'
-            onInput={e => setEm(email += e.target.value)}
+            onInput={e => setEm(e.target.value)}
           />
           <Form.Input
             label='Password'

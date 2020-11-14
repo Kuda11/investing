@@ -23,7 +23,7 @@ const HomePage = () => {
 
   useEffect(() => {
     getArticles();
-  }, []);
+  });
 
   if (loading) {
     return (
