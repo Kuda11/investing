@@ -8,8 +8,8 @@ const FormSignUp = () => {
   let [password, setPass] = useState()
   let [email, setEm] = useState()
 
-  const handleLogin = useCallback(async event => {
-    event.preventDefault();
+  const handleLogin = async(e) => {
+    e.preventDefault();
     try {
       await firebase
         .auth()
@@ -19,7 +19,7 @@ const FormSignUp = () => {
     catch (error) {
       alert(error)
     }
-  }, [email, password])
+  }
 
   return (
     <>
