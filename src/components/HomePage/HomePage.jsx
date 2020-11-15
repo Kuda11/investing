@@ -7,23 +7,25 @@ const HomePage = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const ref = firebase.firestore().collection("web-page-data");
 
-  const getArticles = () => {
-    setLoading(true);
-    ref.onSnapshot((querySnapshot) => {
-      const items = [];
-      querySnapshot.forEach((doc) => {
-        items.push(doc.data());
-      });
-      setArticles(items)
-      setLoading(false)
-    });
-  }
 
   useEffect(() => {
-    getArticles();
-  });
+    const ref = firebase.firestore().collection("web-page-data");
+
+    const getArticles = () => {
+      setLoading(true);
+      console.log("loading set true")
+      ref.onSnapshot((querySnapshot) => {
+        const items = [];
+        querySnapshot.forEach((doc) => {
+          items.push(doc.data());
+        });
+        setArticles(items)
+        setLoading(false)
+        console.log("loading set fasle")
+      })};
+      getArticles()
+  }, []);
 
   if (loading) {
     return (
